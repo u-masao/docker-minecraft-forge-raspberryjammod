@@ -1,0 +1,14 @@
+services:
+  mc-forge:
+    build:
+      context: .
+    ports:
+      - "25565:25565" # Minecraft サーバー
+      - "14711:14711" # Raspberry Jam Mod ws
+      - "4711:4711" # Raspberry Jam Mod socket
+    stdin_open: true # -i (標準入力を開いたままにする)
+    tty: true        # -t (疑似 TTY を割り当てる)
+
+    volumes:
+      - ./storage/server.properties:/bin/forge/server.properties
+      # - ./storage/mc_data:/bin/forge
