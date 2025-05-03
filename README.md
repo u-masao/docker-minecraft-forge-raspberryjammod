@@ -57,6 +57,31 @@
         ```
         チャット欄に「Hello wordl!」と表示されれば成功です。
 
+    * **方法3: コンテナ外で実行**
+        Raspberry Jam Mod のリポジトリをクローンします。
+
+        ```
+        git clone https://github.com/arpruss/raspberryjammod.git
+        cd raspberryjammod
+        ```
+
+        コードを修正します。
+
+        ```
+        vi mcpipy/mcpi/util.py # 2箇所修正：collections -> collections.abc
+        vi mcpipy/mcpi/vec3.py # 2箇所修正：collections -> collections.abc
+        ````
+
+        実行します。
+
+        ```
+        export MINECRAFT_API_HOST=localhost  # サーバーホスト
+        export MINECRAFT_API_PORT=4711  # サーバーポート
+        python mcpipy/helloworld.py
+        ```
+
+        Minecraft クライアントアプリのチャット欄に「Hello wordl!」と表示されれば成功です。
+
 6.  **サーバーコンソールへのアクセス:**
     * ログの表示: `docker compose logs -f mc-forge`
     * コンソールへのアタッチ: `docker compose attach mc-forge`
