@@ -9,9 +9,12 @@ RUN apt update && \
     python3-pip \
     python3-tk \
     python-is-python3 && \
+    apt-get autoremove -y && \
+    apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN pip3 install \
+RUN pip3 install -U pip && \
+    pip3 install --no-cache-dir \
     pygame \
     pillow
 
