@@ -11,4 +11,5 @@ services:
 
     volumes:
       - ./storage/server.properties:/bin/forge/server.properties
-      # - ./storage/mc_data:/bin/forge
+      # - ./storage/mc_data/world:/bin/forge/world # ワールドデータ
+      # - ./storage/mc_data/logs:/bin/forge/logs   # ログ
