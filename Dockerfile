@@ -7,6 +7,7 @@ RUN apt update && \
     curl \
     python3 \
     python3-pip \
+    python3-tk \
     python-is-python3 && \
     rm -rf /var/lib/apt/lists/*
 
