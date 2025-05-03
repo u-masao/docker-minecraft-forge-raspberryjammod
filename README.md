@@ -13,7 +13,7 @@
 ## 🔧 必要なもの (Prerequisites)
 
 * [Docker](https://docs.docker.com/get-docker/)
-* [Docker Compose](https://docs.docker.com/compose/install/) (通常、Docker Desktop に含まれています)
+* [Docker Compose](https://docs.docker.com/compose/install/) (通常、Docker に含まれています)
 
 ## 🚀 使い方 (Usage)
 
